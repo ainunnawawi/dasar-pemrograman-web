@@ -31,10 +31,14 @@ nav{
     top: 0;
 }
 
+nav ul{
+    padding-inline: 4rem;
+    display: flex;
+    gap: 2rem;
+}
+
 nav li{
-    display: inline;
     list-style-type: none;
-    margin: 20px;
 }
 
 nav a{
@@ -50,19 +54,21 @@ nav a:hover{
 
 main{
     padding: 20px;
-    overflow: auto;
+    display: flex;
+    gap: 1.5rem;
 }
 
 .card {
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 20px;
-    margin: 20px;
 }
 
 #content{
-    width: 75%;
-    float: left;
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
 }
 
 .featured-images {
@@ -73,9 +79,7 @@ main{
 }
 
 aside{
-    width: 25%;
-    float:right;
-    padding-left: 20px;
+    flex: 1;
 }
 
 .profile header {
@@ -94,9 +98,20 @@ footer{
     font-weight: bold;
 }
 
-@media screen and (max-width: 1000px){
-    #content, aside{
-        width: 100%;
-        padding: 0;
+@media screen and (max-width: 1200px){
+   main{
+    flex-flow: column nowrap;
+   }
+   main aside{
+    align-self: center;
+   }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul{
+        justify-content: center;
+    }
+    main aside{
+        align-self: stretch;
     }
 }
