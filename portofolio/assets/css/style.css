@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* style header */
+header{
+    position: fixed;
+}
+
+header.navbar-container{
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    background-color: white;
+
+    padding-block: 1rem;
+    z-index: 999;
+}
+
+header.navbar-container .logo img{
+    width: 150px;
+}
+
+header.navbar-container .nav-list ul{
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li{
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li a{
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #9975AE
+;
+    padding: .5rem 1.5rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a{
+    background-color: #9975AE
+;
+    color: white;
+}
+
+/* style main */
+
+main{
+    width: 100%;
+    margin-inline: auto;
+    flex: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main article{
+    width: 100%;
+    margin-inline: auto;
+    padding: 10rem 12% 5rem;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+main article .content{
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+
+}
+
+main article .content .content-description{
+    flex: 1 1 auto;
+}
+
+main article .content .content-description .title{
+    font-size: 3.5rem;
+    color: #9975AE;
+    margin-block: 1rem;
+}
+
+main article .content .content-description p{
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+    color: #34243D;
+}
+
+main article .content .content-description button{
+    padding: .8rem 2.5rem;
+    margin-block-start: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+
+    border: 3px solid transparent;
+    border-radius: 999px;
+    background-color: #9975AE;
+    cursor: pointer;
+    transition: all .15s ease-in;
+}
+
+main article .content .content-description button:hover{
+    border: 3px solid #9975AE;
+    color: #9975AE;
+    background-color: transparent;
+}
+
+main article .content .content-image{
+    flex: 1;
+    display: flex;
+}
+
+main article .content .content-image img{
+    margin: auto;
+    min-height: 250px;
+    width: 300px;
+}
+
+main .section-1{
+    background-image: url('../img/begroud2.svg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+main .section-2 {
+    background-image: url('../img/begroud3.svg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+main article .content .card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+    padding: 0 2rem 3rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main aside{
+    position: fixed;
+    inset-block: 0;
+    inset-inline-end: 0;
+}
+
+main aside .social-media{
+    height: 100%;
+    display: flex;
+}
+
+main aside .social-media ul{
+    padding: 1.5rem 1rem;
+    margin: auto;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-color: #9975AE;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+main aside .social-media li{
+    list-style-type: none;
+}
+
+main aside .social-media li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    transition: all .1s ease-in-out;
+}
+
+main aside .social-media li a:hover{
+    color: #89b0d9;
+}
+
+
+main aside {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-end: 0;
+}
+
+main aside .social-media {
+    height: 100%;
+    display: flex;
+}
+
+main aside .social-media ul {
+    padding: 1.5rem 1rem;
+    margin: auto;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-color: #9975AE;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+main aside .social-media li {
+    list-style-type: none;
+}
+
+main aside .social-media li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    transition: all .1s ease-in-out;
+}
+
+main aside .social-media li a:hover {
+    color: #89b0d9;
+}
+
+
+
+footer{
+    background-color: #9975AE;
+    text-align: center;
+    color: white;
+    padding: 1rem ;
+}
+
+@media screen and (max-width: 1000px) {
+    main article{
+        padding: 10rem 3rem;
+    }
+
+    main article .content{
+        gap: 2rem;
+    }
+
+    main article .content .content-description .title{
+        font-size: 3rem;
+    }
+
+    main article .content .content-description p{
+        font-size: 1rem;
+    }
+
+    main .section-1 {
+        background-position: left;
+    }
+    
+    main .section-2 {
+        background-position: right;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    header.navbar-container{
+        flex-direction: column;
+    }
+
+    header.navbar-container .nav-list ul{
+        flex-wrap: wrap;
+        column-gap: .5rem;
+    }
+    main article .content {
+        flex-direction: column;
+    }
+
+    main article .content .content-image{
+        order: -1;
+    }
+
+}
