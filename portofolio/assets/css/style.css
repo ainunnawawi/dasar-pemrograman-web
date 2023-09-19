@@ -126,6 +126,19 @@ main aside .content{
     gap: 4rem;
 }
 
+main aside .content .content-description table{
+    font-size: 1.2rem;
+    color: white;
+}
+
+main aside .content .content-description table tr{
+    height: 2rem;
+}
+
+main aside .content .content-description table tr td{
+    vertical-align: text-top;
+}
+
 main article .content .content-description, main aside .content .content-description{
     flex: 1 1 auto;
 }
@@ -238,6 +251,10 @@ footer{
     main article .content{
         gap: 2rem;
     }
+    
+    main aside .content {
+        flex-direction: column;
+    }
 
     main article .content .content-description .title{
         font-size: 3rem;
@@ -297,7 +314,7 @@ footer{
         color: #9975AE
     }
 
-    main article .content {
+    main article .content, main aside .content {
         flex-direction: column;
     }
 
