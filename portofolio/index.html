@@ -17,16 +17,17 @@
     <!--navbar-->
     <header class="navbar-container">
         <div class="logo">
-            <img src="assets/img/dicoding-header-logo.png" alt="dicoding-header-logo">
+            <img src="assets/img/logo-warna.png" alt="logo-warna">
         </div>
         <nav class="nav-list">
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skill">Skill</a></li>
-                <li><a href="#">Apa yang Baru</a></li>
-                <li><a href="#">Kontak</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+                <li><a href="#biodata"> biodata</a></li>
             </ul>
         </nav>
+        <div class="menu-icon">&#9776;</div>
     </header>
     
     <!--main-->
@@ -34,14 +35,17 @@
         <article id="about">
             <div class="content">
                 <div class="content-description">
-                    <h1 class="title">Halo Im Ainun Nawawi</h1>
+                    <h1 class="title">Hi I'm Ainun Nawawi</h1>
                     <p>
-                        Kami yakin pendidikan teknologi adalah fondasi bagi setiap bangsa agar menjadi yang terdepan dalam menghadapi dunia digital. Dicoding hadir sebagai platform pendidikan teknologi yang membantu menghasilkan talenta digital berstandar global. Semua demi mengakselerasi Indonesia agar menjadi yang terdepan.
+                        "Saya seorang web developer dengan latar belakang pendidikan sarjana dalam bidang Sistem Informasi. Lebih dari sekadar
+                        koding, saya menggabungkan pengetahuan saya tentang teknologi dengan kreativitas untuk menciptakan pengalaman web yang
+                        menarik dan bermanfaat. Saya senang memecahkan tantangan teknis, mengoptimalkan kinerja, dan terus belajar dalam dunia
+                        yang selalu berkembang ini."
                     </p>
-                    <button>Lebih lanjut</button>
+                    <button>download CV</button>
                 </div>
                 <div class="content-image">
-                    <img src="assets/img/avatar.svg" alt="circle-g">
+                    <img src="assets/img/avatar.svg" alt="avatar">
                 </div>
             </div>
         </article>
@@ -51,42 +55,76 @@
                 <div class="card">
                     <img src="assets/img/developer.svg" alt="developer">
                     <h2>Web Developer</h2>
+                    <p>HTML, CSS, JavaScript, Web Design, Framework & Library</p>
                 </div>
                 <div class="card">
-                    <img src="assets/img/developer.svg" alt="developer">
+                    <img src="assets/img/analyst.svg" alt="analyst">
                     <h2>Data Analyst</h2>
+                    <p>Tools, Python, R, Visualisasi Data, Bisnis Analyst</p>
                 </div>
                 <div class="card"><img src="assets/img/desainer.svg" alt="desainer">
-                    <h2>Desainer</h2>
+                    <h2>Graphic Desainer</h2>
+                    <p>Adobe AI, Corel Draw, Figma dan Adobe XD</p>
                 </div>
             </div>
         </article>
-        <article class="section-2">
+        <article id="kontak" class="section-2">
+            <h1>Kontak</h1>
             <div class="content">
-                <div class="content-description">
-                    <h1 class="title">Dicoding Indonesia</h1>
-                    <p>Kami yakin pendidikan teknologi adalah fondasi bagi setiap bangsa agar menjadi yang terdepan dalam
-                        menghadapi
-                        dunia
-                        digital. Dicoding hadir sebagai platform pendidikan teknologi yang membantu menghasilkan talenta digital
-                        berstandar
-                        global. Semua demi mengakselerasi Indonesia agar menjadi yang terdepan.</p>
-                    <button>Lebih lanjut</button>
+                <div class="card">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <h2>WhatsApp</h2>
                 </div>
-                <div class="content-image">
-                    <img src="assets/img/circle-g.jpg" alt="circle-g">
+                <div class="card">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <h2>Instagram</h2>
+                </div>
+                <div class="card">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <h2>Facebook</h2>
+                </div>
+                <div class="card">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <h2>LinkedIn</h2>
                 </div>
             </div>
         </article>
         <!--aside-->
-        <aside>
-            <div class="social-media">
-                <ul>
-                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                </ul>
+        <aside id="biodata">
+            <h1>Biodata</h1>
+            <div class="content">
+                <div class="content-image">
+                    <img src="assets/img/avatar.svg" alt="avatar">
+                </div>
+                <div class="content-description">
+                    <table>
+                        <tr>
+                            <td>Nama</td>
+                            <td>:</td>
+                            <td>Ainun Nawawi</td>
+                        </tr>
+                        <tr>
+                            <td>Nama</td>
+                            <td>:</td>
+                            <td>Ainun Nawawi</td>
+                        </tr>
+                        <tr>
+                            <td>Nama</td>
+                            <td>:</td>
+                            <td>Ainun Nawawi</td>
+                        </tr>
+                        <tr>
+                            <td>Nama</td>
+                            <td>:</td>
+                            <td>Ainun Nawawi</td>
+                        </tr>
+                        <tr>
+                            <td>Nama</td>
+                            <td>:</td>
+                            <td>Ainun Nawawi</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </aside>
     </main>
@@ -94,5 +132,49 @@
     <footer>
         <p>Belajar Dasar Pemrograman Web &#169; 2023, Ainun Nawawi x Dicoding Academy</p>
     </footer>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navList = document.querySelector('.nav-list');
+
+        menuIcon.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        menuIcon.textContent = navList.classList.contains('active') ? '✕' : '☰'; 
+        });
+
+        window.addEventListener('scroll', () => {
+            const navContent = document.querySelector('header.navbar-container');
+            const scrollY = window.scrollY || window.pageYOffset;
+
+            // Tambahkan atau hapus class 'scrolled' pada .nav-list sesuai dengan kejadian scroll
+            if (scrollY > 0) {
+                navContent.classList.add('scrolled');
+            } else {
+                navContent.classList.remove('scrolled');
+            }
+        });
+
+        // Mendapatkan semua tautan dalam .nav-list
+        const navLinks = document.querySelectorAll('.nav-list a');
+
+            // Menambahkan event listener pada setiap tautan
+        navLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Mencegah perilaku bawaan tautan
+
+                const targetId = link.getAttribute('href').substring(1); // Mengambil ID elemen tujuan
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                        // Menggulir ke elemen tujuan dengan efek smooth scroll
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+    </script>
 </body>
 </html>

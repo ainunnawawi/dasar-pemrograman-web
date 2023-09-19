@@ -13,6 +13,21 @@ body{
     flex-direction: column;
 }
 
+h1{
+    font-size: 3.5rem;
+    color: #9975AE;
+}
+h2{
+    color: #9975AE;
+    margin-block: 1rem;
+}
+
+p{
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+    color: #34243D;
+}
+
 /* style header */
 header{
     position: fixed;
@@ -29,6 +44,10 @@ header.navbar-container{
 
     padding-block: 1rem;
     z-index: 999;
+}
+
+header.navbar-container.scrolled {
+    box-shadow: 0px 0px 5px 5px #9975ae54;
 }
 
 header.navbar-container .logo img{
@@ -50,8 +69,7 @@ header.navbar-container .nav-list li a{
     text-decoration: none;
     font-size: 1.05rem;
     font-weight: 700;
-    color: #9975AE
-;
+    color: #9975AE;
     padding: .5rem 1.5rem;
     border-radius: 999px;
     transition: all .2s ease-in-out;
@@ -61,6 +79,11 @@ header.navbar-container .nav-list li:hover a{
     background-color: #9975AE
 ;
     color: white;
+}
+
+header.navbar-container .menu-icon {
+    display: none;
+    cursor: pointer;
 }
 
 /* style main */
@@ -75,7 +98,7 @@ main{
     align-items: center;
 }
 
-main article{
+main article, main aside{
     width: 100%;
     margin-inline: auto;
     padding: 10rem 12% 5rem;
@@ -93,29 +116,32 @@ main article .content{
     display: flex;
     align-items: stretch;
     gap: 2rem;
-
 }
 
-main article .content .content-description{
+main aside .content{
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+main article .content .content-description, main aside .content .content-description{
     flex: 1 1 auto;
 }
 
-main article .content .content-description .title{
-    font-size: 3.5rem;
-    color: #9975AE;
+main article#skill h1, main aside#biodata h1{
+    color: white;
+}
+
+main article .content .content-description .title, main aside .content .content-description .title{
     margin-block: 1rem;
 }
 
-main article .content .content-description p{
-    line-height: 1.7rem;
-    font-size: 1.2rem;
-    color: #34243D;
-}
-
 main article .content .content-description button{
-    padding: .8rem 2.5rem;
+    padding: .5rem 2.5rem;
     margin-block-start: 1rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: 700;
     font-size: 1rem;
     font-family: 'Quicksand', sans-serif;
@@ -134,12 +160,12 @@ main article .content .content-description button:hover{
     background-color: transparent;
 }
 
-main article .content .content-image{
+main article .content .content-image, main aside .content .content-image{
     flex: 1;
     display: flex;
 }
 
-main article .content .content-image img{
+main article .content .content-image img, main aside .content .content-image img{
     margin: auto;
     min-height: 250px;
     width: 300px;
@@ -159,99 +185,42 @@ main .section-2 {
     background-repeat: no-repeat;
 }
 
+main #biodata{
+    background-image: url('../img/begroud2.svg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
 main article .content .card {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
-    padding: 0 2rem 3rem;
+    padding: 2rem 2rem;
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
 }
 
-main aside{
-    position: fixed;
-    inset-block: 0;
-    inset-inline-end: 0;
+main article .content .card h2 {
+    font-size: x-large;
 }
 
-main aside .social-media{
-    height: 100%;
-    display: flex;
+main article .content .card p {
+    font-size: medium;
+    line-height: 1.5rem;
 }
 
-main aside .social-media ul{
-    padding: 1.5rem 1rem;
-    margin: auto;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-    background-color: #9975AE;
-
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
+main article#kontak h1{
+    color: #9975AE;
 }
 
-main aside .social-media li{
-    list-style-type: none;
+main article#kontak .content .card i{
+    font-size: xx-large;
+    color: #9975AE;
 }
-
-main aside .social-media li a{
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: white;
-    transition: all .1s ease-in-out;
-}
-
-main aside .social-media li a:hover{
-    color: #89b0d9;
-}
-
-
-main aside {
-    position: fixed;
-    inset-block: 0;
-    inset-inline-end: 0;
-}
-
-main aside .social-media {
-    height: 100%;
-    display: flex;
-}
-
-main aside .social-media ul {
-    padding: 1.5rem 1rem;
-    margin: auto;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-    background-color: #9975AE;
-
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-main aside .social-media li {
-    list-style-type: none;
-}
-
-main aside .social-media li a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: white;
-    transition: all .1s ease-in-out;
-}
-
-main aside .social-media li a:hover {
-    color: #89b0d9;
-}
-
-
 
 footer{
     background-color: #9975AE;
@@ -261,6 +230,7 @@ footer{
 }
 
 @media screen and (max-width: 1000px) {
+    
     main article{
         padding: 10rem 3rem;
     }
@@ -278,23 +248,55 @@ footer{
     }
 
     main .section-1 {
-        background-position: left;
+        background-position: top left;
     }
     
     main .section-2 {
-        background-position: right;
+        background-position: top right;
+    }
+
+    main article .content .card h2 {
+        font-size: 1,1rem;
+    }
+
+    main article .content .card p {
+        font-size: 1rem;
+        line-height: 1.5rem;
     }
 }
 
 @media screen and (max-width: 700px) {
-    header.navbar-container{
-        flex-direction: column;
-    }
 
     header.navbar-container .nav-list ul{
-        flex-wrap: wrap;
-        column-gap: .5rem;
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0px 3px 2px 2px #9975ae54;
+        position: absolute;
+        top: 58px;
+        left: 0;
+        width: 100%;
+        padding: 16px 0;
+        align-items: center;
+        gap: 1rem 1rem;
+        z-index: 1;
     }
+
+    header.navbar-container .nav-list.active ul{
+        display: flex;
+    }
+
+    header.navbar-container .nav-list li a{
+        color: #9975AE;
+    }
+    
+    header.navbar-container .menu-icon {
+        display: flex;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #9975AE
+    }
+
     main article .content {
         flex-direction: column;
     }
@@ -303,4 +305,9 @@ footer{
         order: -1;
     }
 
+    main article .content .content-image img{
+        margin: auto;
+        min-height: auto;
+        width: 80%;
+    }
 }

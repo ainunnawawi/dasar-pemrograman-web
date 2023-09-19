@@ -7,12 +7,16 @@ viewBox="0 0 32512 18288"
  <defs>
   <style type="text/css">
    <![CDATA[
+    .fil1 {fill:none}
     .fil0 {fill:#9975AE}
    ]]>
   </style>
  </defs>
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <polygon class="fil0" points="0,0 32512,2166 32512,18288 0,18288 "/>
+  <g id="_1995997886352">
+   <polygon class="fil0" points="0,0 32512,2166 32512,18288 0,18288 "/>
+   <polygon class="fil1" points="0,0 32512,0 32512,2166 "/>
+  </g>
  </g>
 </svg>
