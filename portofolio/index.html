@@ -45,7 +45,7 @@
                     <button>download CV</button>
                 </div>
                 <div class="content-image">
-                    <img src="assets/img/avatar.svg" alt="avatar">
+                    <img id="rotating-image" src="assets/img/avatar.svg" alt="avatar">
                 </div>
             </div>
         </article>
@@ -145,8 +145,6 @@
         window.addEventListener('scroll', () => {
             const navContent = document.querySelector('header.navbar-container');
             const scrollY = window.scrollY || window.pageYOffset;
-
-            // Tambahkan atau hapus class 'scrolled' pada .nav-list sesuai dengan kejadian scroll
             if (scrollY > 0) {
                 navContent.classList.add('scrolled');
             } else {
@@ -154,19 +152,16 @@
             }
         });
 
-        // Mendapatkan semua tautan dalam .nav-list
         const navLinks = document.querySelectorAll('.nav-list a');
 
-            // Menambahkan event listener pada setiap tautan
         navLinks.forEach(link => {
             link.addEventListener('click', (event) => {
-                event.preventDefault(); // Mencegah perilaku bawaan tautan
+                event.preventDefault();
 
-                const targetId = link.getAttribute('href').substring(1); // Mengambil ID elemen tujuan
+                const targetId = link.getAttribute('href').substring(1); 
                 const targetElement = document.getElementById(targetId);
 
                 if (targetElement) {
-                        // Menggulir ke elemen tujuan dengan efek smooth scroll
                     window.scrollTo({
                         top: targetElement.offsetTop,
                         behavior: 'smooth'
@@ -174,6 +169,23 @@
                 }
             });
         });
+
+        const rotatingImage = document.getElementById('rotating-image');
+        let rotationAngle = 0;
+        let rotationDirection = 1; 
+
+        function rotateImage() {
+            rotationAngle += rotationDirection * 0.5;
+            rotatingImage.style.transform = `rotate(${rotationAngle}deg)`;
+        }
+
+        const animationInterval = setInterval(() => {
+                rotateImage();
+
+            if (rotationAngle >= 5 || rotationAngle <= -5) {
+                rotationDirection *= -1; 
+            }
+        }, 50);
 
     </script>
 </body>
