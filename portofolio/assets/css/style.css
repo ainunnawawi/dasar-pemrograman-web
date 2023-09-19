@@ -118,12 +118,25 @@ main article .content{
     gap: 2rem;
 }
 
+main article#kontak .content {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
 main aside .content{
     width: 100%;
     flex: 1;
     display: flex;
     align-items: center;
     gap: 4rem;
+}
+
+main article .content .content-description{
+    width: 100%;
 }
 
 main aside .content .content-description table{
@@ -178,10 +191,18 @@ main article .content .content-image, main aside .content .content-image{
     display: flex;
 }
 
-main article .content .content-image img, main aside .content .content-image img{
+main article .content .content-image img{
     margin: auto;
     min-height: 250px;
     width: 300px;
+}
+
+main aside .content .content-image img{
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 10px solid white;
 }
 
 main .section-1{
@@ -238,8 +259,11 @@ main article#kontak .content .card i{
 footer{
     background-color: #9975AE;
     text-align: center;
+    padding: 0 2rem ;
+}
+
+footer p{
     color: white;
-    padding: 1rem ;
 }
 
 @media screen and (max-width: 1000px) {
@@ -251,6 +275,8 @@ footer{
     main article .content{
         gap: 2rem;
     }
+    
+    
     
     main aside .content {
         flex-direction: column;
@@ -314,6 +340,10 @@ footer{
         color: #9975AE
     }
 
+    main article .content .content-description{
+        width: 100%;
+    }
+
     main article .content, main aside .content {
         flex-direction: column;
     }
@@ -326,5 +356,9 @@ footer{
         margin: auto;
         min-height: auto;
         width: 80%;
+    }
+
+    footer p{
+        font-size: 1rem;
     }
 }
