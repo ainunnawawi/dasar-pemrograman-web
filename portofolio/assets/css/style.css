@@ -358,7 +358,7 @@ footer p{
         width: 80%;
     }
 
-    footer p{
+    main aside .content .content-description table tr td, footer p{
         font-size: 1rem;
     }
 }
