@@ -75,7 +75,7 @@ header.navbar-container .nav-list li a{
     transition: all .2s ease-in-out;
 }
 
-header.navbar-container .nav-list li:hover a{
+header.navbar-container .nav-list li:hover a, header.navbar-container .nav-list li a.active{
     background-color: #9975AE
 ;
     color: white;

@@ -22,10 +22,10 @@
         </div>
         <nav class="nav-list">
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skill">Skill</a></li>
-                <li><a href="#kontak">Kontak</a></li>
-                <li><a href="#biodata"> biodata</a></li>
+                <li><a href="#about" id="navAbout">About</a></li>
+                <li><a href="#skill" id="navSkill">Skill</a></li>
+                <li><a href="#kontak" id="navKontak">Kontak</a></li>
+                <li><a href="#biodata" id="navBiodata"> biodata</a></li>
             </ul>
         </nav>
         <div class="menu-icon">&#9776;</div>
@@ -135,12 +135,13 @@
     </footer>
 
     <script>
+
         const menuIcon = document.querySelector('.menu-icon');
         const navList = document.querySelector('.nav-list');
 
         menuIcon.addEventListener('click', () => {
             navList.classList.toggle('active');
-        menuIcon.textContent = navList.classList.contains('active') ? '✕' : '☰'; 
+            menuIcon.textContent = navList.classList.contains('active') ? '✕' : '☰'; 
         });
 
         window.addEventListener('scroll', () => {
@@ -156,6 +157,15 @@
         const navLinks = document.querySelectorAll('.nav-list a');
 
         navLinks.forEach(link => {
+            
+            link.addEventListener("click", function () {
+                navLinks.forEach(navLink => {
+                    navLink.classList.remove("active");
+                });
+
+                this.classList.add("active");
+            });
+
             link.addEventListener('click', (event) => {
                 event.preventDefault();
 
