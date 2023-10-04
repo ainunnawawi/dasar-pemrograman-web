@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--icon-->
+    <link href="https://css.gg/css" rel="stylesheet" />
+    <link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Bookshelf</h1>
+        </div>
+        <input class="cari" type="text" name="cariBuku" id="cariBuku" placeholder="Cari buku"/>
+    </header>
+    
+    <main>
+        <aside>
+            <div class="card">
+                <h1>Form Buku</h1>
+                <form action="#" id="form">
+                    <label for="judulBuku">Judul</label>
+                    <input type="text" name="judulBuku" id="judulBuku" placeholder="Judul Buku" required/>
+
+                    <label for="penulisBuku">Penulis</label>
+                    <input type="text" name="penulisBuku" id="penulisBuku" placeholder="Penulis buku" required/>
+
+                    <label for="tahunBuku">Tahun</label>
+                    <input type="number" name="tahunBuku" id="tahunBuku" placeholder="Tahun buku" required/>
+
+                    <input type="checkbox" id="status" name="status" value="false" onchange="updateCheckboxValue()"/>
+                    <label for="status">Sudah dibaca</label>
+
+                    <button class="btn-primer" type="submit">Tambah</button>
+                </form>
+            </div>
+        </aside>
+        <article>
+            <div class="card">
+                <h1>Belum Dibaca</h1>
+                <div class="content" id="belumDibaca">
+                    
+                </div>
+            </div>
+            <div class="card">
+                <h1>Sudah Dibaca</h1>
+                <div class="content" id="sudahDibaca">
+                    
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <div id="overlay" class="overlay"></div>
+
+    <div id="editDialog" class="custom-dialog">
+        <div class="content">
+            <h1>Edit Buku</h1>
+            <label for="editedTitle">Judul</label>
+            <input type="text" id="editedTitle" placeholder="Judul Buku">
+            
+            <label for="editedAuthor">Penulis</label>
+            <input type="text" id="editedAuthor" placeholder="Penulis Buku">
+            
+            <label for="editedYear">Tahun</label>
+            <input type="number" id="editedYear" placeholder="Tahun Buku">
+            
+            <div class="button-grup">
+                <button id="confirmEdit" class="btn-primer">Simpan</button>
+                <button id="cancelEdit" class="btn-danger">Batal</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="customDialog" class="custom-dialog">
+        <div class="content">
+            <p>Anda yakin ingin menghapus buku ini?</p>
+            <div class="button-grup">
+                <button id="confirmDelete" class="btn-primer">Ya</button>
+                <button id="cancelDelete" class="btn-danger">Batal</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

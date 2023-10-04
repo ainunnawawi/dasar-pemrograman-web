@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    margin: 0 0 2rem 0;
+    color: cornflowerblue;
+}
+
+h2{
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+    color: cornflowerblue;
+}
+
+p{
+    margin: 0;
+}
+
+header{
+    padding: 1rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 3px 3px rgba(128, 128, 128, 0.15);
+    background-color: cornflowerblue;
+}
+
+header h1{
+    color: white;
+    margin: 0;
+}
+
+header input.cari{
+    width: 300px;
+    background-color: white;
+    height: 2rem;
+    border: none;
+    outline: unset;
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    font-family: 'Quicksand',sans-serif;
+}
+
+main{
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.card {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 3px 3px rgba(128, 128, 128, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+main aside{
+    padding: 1rem 0 1rem 1rem;
+    width: 30%;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+main aside form input, .custom-dialog input{
+    font-family: 'Quicksand', sans-serif;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0 1rem 0;
+    width: 100%;
+    border-radius: 10px;
+    outline: unset;
+    border: 2px solid rgb(226, 226, 226);
+    transition: all 0.5s;
+}
+
+main aside form input:hover, 
+main aside form input:focus,
+.custom-dialog input:hover,
+.custom-dialog input:focus {
+    border: 2px solid cornflowerblue;
+}
+
+main aside form input#status{
+    width: unset;
+}
+
+main aside form button{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    border: none;
+    color: white;
+    padding: 0.7rem 1rem;
+    margin-top: 2rem;
+    border-radius: 999px;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+main article{
+    padding: 1rem 1rem;
+    width: 70%;
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+main article .content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 365px;
+    overflow-y: scroll;
+}
+
+main article .content::-webkit-scrollbar {
+    display: none;
+}
+
+main article .content .item.card{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: unset;
+    background-color: rgba(100, 148, 237, 0.100);
+}
+
+main article .content .item.card .horButton{
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+main article .content .item.card .horButton button {
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 999px;
+    border: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+main article .content .item.card .horButton button:hover,
+main aside form button:hover,
+.custom-dialog button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 2px 2px 1px rgba(151, 151, 151, 0.493);
+}
+
+.btn-primer{
+    background-color: cornflowerblue;
+}
+
+.btn-info{
+    background-color: #28a745;
+}
+
+.btn-orange{
+    background-color: orange;
+}
+
+.btn-danger{
+    background-color: crimson;
+}
+
+.alert {
+    position: fixed;
+    font-weight: 700;
+    top: 10px;
+    right: 10px;
+    left: 10x;
+    background-color: #28a745;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.custom-dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.custom-dialog .content{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.custom-dialog label {
+    display: block;
+    margin-top: 10px;
+}
+
+.custom-dialog .content .button-grup{
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-dialog button {
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    font-weight: 700;
+    transition: all 0.2s;
+}
