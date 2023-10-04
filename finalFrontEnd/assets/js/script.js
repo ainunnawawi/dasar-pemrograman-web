@@ -1,13 +1,6 @@
 function updateCheckboxValue() {
     const checkbox = document.getElementById('status');
-
-    const isChecked = checkbox.checked;
-
-    if (isChecked) {
-        checkbox.setAttribute('value', true)
-    } else {
-        checkbox.setAttribute('value', false)
-    }
+    checkbox.setAttribute('value', checkbox.checked);
 }
 
 function isStorageExist() {
@@ -39,8 +32,7 @@ function addBookshelf() {
     const title = titleInput.value;
     const author = authorInput.value;
     const year = yearInput.value;
-    const statusString = statusCheckbox.value;
-    const isComplete = (statusString.toLowerCase() === 'true');
+    const isComplete = statusCheckbox.checked;
 
     const generatedID = generateId();
     const booksObjek = generateBooksObjek(generatedID, title, author, year, isComplete);
@@ -154,7 +146,7 @@ function makeBookshelf(booksObjek) {
 
     const contentItem = document.createElement('div');
     contentItem.classList.add('item', 'card');
-    contentItem.setAttribute('id', `book-${booksObjek.id}`);
+    contentItem.setAttribute('id', booksObjek.id);
     contentItem.append(teksJudul, teksPenulis, teksTahun, divButton);
     
     return contentItem;
@@ -182,10 +174,6 @@ function findBook(bookId) {
 }
 
 function editBook(bookId) {
-    const bookElement = document.getElementById(`book-${bookId}`);
-
-    if (!bookElement) return;
-
     const bookTarget = findBook(bookId);
 
     if (!bookTarget) return;
