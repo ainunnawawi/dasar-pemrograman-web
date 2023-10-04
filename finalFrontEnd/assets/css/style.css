@@ -77,6 +77,10 @@ main aside{
     justify-content: space-between;
 }
 
+main aside form{
+    height: 365px;
+}
+
 main aside form input, .custom-dialog input{
     font-family: 'Quicksand', sans-serif;
     padding: 0.5rem 1rem;
