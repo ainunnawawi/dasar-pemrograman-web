@@ -182,6 +182,10 @@ function findBook(bookId) {
 }
 
 function editBook(bookId) {
+    const bookElement = document.getElementById(`book-${bookId}`);
+
+    if (!bookElement) return;
+
     const bookTarget = findBook(bookId);
 
     if (!bookTarget) return;
@@ -289,7 +293,7 @@ const SAVED_EVENT = 'saved-book';
 const STORAGE_KEY = 'BOOKSHELF_APPS';
 
 document.addEventListener(SAVED_EVENT, function () {
-    console.log(localStorage.getItem(STORAGE_KEY));
+    localStorage.getItem(STORAGE_KEY);
 })
 
 function loadDataFromStorage() {
