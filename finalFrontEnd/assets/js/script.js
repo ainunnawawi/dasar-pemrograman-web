@@ -31,7 +31,7 @@ function addBookshelf() {
 
     const title = titleInput.value;
     const author = authorInput.value;
-    const year = yearInput.value;
+    const year = parseInt(yearInput.value);
     const isComplete = statusCheckbox.checked;
 
     const generatedID = generateId();
@@ -196,7 +196,7 @@ function editBook(bookId) {
     confirmEditButton.addEventListener('click', function () {
         bookTarget.title = editedTitleInput.value;
         bookTarget.author = editedAuthorInput.value;
-        bookTarget.year = editedYearInput.value;
+        bookTarget.year = parseInt(editedYearInput.value);
 
         overlay.style.display = 'none';
         editDialog.style.display = 'none';
@@ -281,7 +281,7 @@ const SAVED_EVENT = 'saved-book';
 const STORAGE_KEY = 'BOOKSHELF_APPS';
 
 document.addEventListener(SAVED_EVENT, function () {
-    localStorage.getItem(STORAGE_KEY);
+   localStorage.getItem(STORAGE_KEY);
 })
 
 function loadDataFromStorage() {
